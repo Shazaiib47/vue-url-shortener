@@ -79,3 +79,24 @@ button:disabled {
   background: #fff;
   border-radius: 6px;
 }
+
+/* min-width: 0 lets long urls shrink instead of pushing the buttons off screen */
+.link-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* cut long urls off with ... */
+.link-info small {
+  display: block;
+  color: #78716c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clicks {
+  font-size: 13px;
+  color: #78716c;
+  white-space: nowrap;
+}
