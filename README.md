@@ -7,6 +7,14 @@ This is built as a small standalone app, so I kept it deliberately small: no fra
 backend, no state library on the frontend. Everything that happens is in the code
 you can see.
 
+## How I built this
+
+I used an AI assistant (Claude) the way I'd work with a senior developer:
+it suggested the structure and much of the initial code, and explained the
+reasoning behind it. I set the project up, built it file by file whilst reading along the documentation, tested each
+part as I went (including the API on its own before the frontend), fixed
+setup issues on Windows, and made my own changes along the way.
+
 ## Stack
 
 - **Backend:** PHP 8.1+, SQLite via PDO, run with PHP's built-in server
