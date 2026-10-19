@@ -24,3 +24,32 @@ h1 {
   margin-top: 0;
   color: #78716c;
 }
+
+/* form */
+.shorten-form {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0 8px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #d6d3d1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #1c1917;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
