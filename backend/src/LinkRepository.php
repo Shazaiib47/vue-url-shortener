@@ -16,3 +16,40 @@ class LinkRepository
 
         return $this->findByCode($code);
     }
+
+      // look up a link by its short code, null if there isn't one
+    public function findByCode(string $code): ?array
+    {
+        $stmt = $this->db->prepare('SELECT * FROM links WHERE code = ?');
+        $stmt->execute([$code]);
+
+        return $stmt->fetch() ?: null;
+    }
+
+    // used to check if a url has already been shortened
+    public function findByUrl(string $url): ?array
+    {
+        $stmt = $this->db->prepare('SELECT * FROM links WHERE url = ?');
+        $stmt->execute([$url]);
+
+        return $stmt->fetch() ?: null;
+    }
+
+    // newest links first, for the list on the frontend
+    public function recent(int $limit = 20): array
+    {
+        $stmt = $this->db->prepare('SELECT * FROM links ORDER BY id DESC LIMIT ?');
+        // LIMIT needs a real integer, so bind it as one
+        $stmt->bindValue(1, $limit, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    }
+
+    // add one to the click count when someone visits a short link
+    public function addClick(int $id): void
+    {
+        $stmt = $this->db->prepare('UPDATE links SET clicks = clicks + 1 WHERE id = ?');
+        $stmt->execute([$id]);
+    }
+}
