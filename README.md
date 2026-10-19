@@ -93,7 +93,6 @@ Docs and resources I used while building this.
 - [PDO](https://www.php.net/manual/en/book.pdo.php) – connecting to SQLite and prepared statements
 - [PDOStatement::bindValue](https://www.php.net/manual/en/pdostatement.bindvalue.php) – why `LIMIT` is bound as an integer
 - [random_int](https://www.php.net/manual/en/function.random-int.php) – generating the short codes securely
-- [filter_var / validation filters](https://www.php.net/manual/en/filter.filters.validate.php) – URL validation
 - [Built-in web server](https://www.php.net/manual/en/features.commandline.webserver.php) – running the API with a router script
 
 **SQLite**
@@ -113,6 +112,3 @@ Docs and resources I used while building this.
 
 **Security**
 - [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
-
-**Stack Overflow**
-- [pdo](https://stackoverflow.com/questions/tagged/pdo), [sqlite](https://stackoverflow.com/questions/tagged/sqlite), [vuejs3](https://stackoverflow.com/questions/tagged/vuejs3) and [vite](https://stackoverflow.com/questions/tagged/vite) tags – tips on common issues and practices
