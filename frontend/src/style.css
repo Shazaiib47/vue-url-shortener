@@ -53,3 +53,29 @@ button:disabled {
   opacity: 0.6;
   cursor: default;
 }
+
+/* messages */
+.error {
+  color: #b91c1c;
+}
+
+.empty {
+  color: #78716c;
+}
+
+/* link list */
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+}
+
+.link-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: #fff;
+  border-radius: 6px;
+}
